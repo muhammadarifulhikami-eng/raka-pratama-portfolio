@@ -1,0 +1,683 @@
+<!doctype html>
+<html lang="id" data-theme="light">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Raka Pratama — UI/UX &amp; Web Designer</title>
+    <meta
+      name="description"
+      content="Portofolio resmi Raka Pratama — UI/UX & Web Designer asal Jakarta yang merancang produk digital modern, sistem desain, dan website berkonversi tinggi."
+    />
+    <meta property="og:title" content="Raka Pratama — UI/UX & Web Designer" />
+    <meta
+      property="og:description"
+      content="Merancang pengalaman digital yang memadukan empati pengguna dengan pemikiran futuristik dan presisi eksekusi."
+    />
+    <meta property="og:type" content="website" />
+    <link rel="icon" type="image/svg+xml" href="favicon.svg" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600&family=Plus+Jakarta+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header class="topbar" id="topbar">
+      <div class="container topbar-inner">
+        <a href="#home" class="brand" aria-label="Raka Pratama Home">
+          <svg class="brand-mark" viewBox="0 0 36 32" width="32" height="28" fill="none" aria-hidden="true">
+            <path d="M3 4h11c4.4 0 7.2 2.4 7.2 6.3 0 3.1-1.8 5.2-4.7 5.9L22.2 28h-5.3l-5.2-9.6H8.4V28H3V4zm5.4 4.3v5.4h4.7c1.9 0 3-1 3-2.7s-1.1-2.7-3-2.7H8.4z" fill="currentColor"/>
+            <path d="M21 4h7.5C32.7 4 35 6.4 35 10.2c0 3.9-2.3 6.3-6.5 6.3h-2.1V28H21V4zm5.4 4.3v4h1.7c1.6 0 2.5-.8 2.5-2s-.9-2-2.5-2h-1.7z" fill="#2563eb"/>
+          </svg>
+          <span class="brand-wordmark"><strong>RAKA</strong> PRATAMA</span>
+        </a>
+
+        <nav class="nav-links" id="navLinks" aria-label="Navigasi utama">
+          <a href="#home" class="nav-link active" data-i18n="nav.home">BERANDA</a>
+          <a href="#work" class="nav-link" data-i18n="nav.work">KARYA</a>
+          <a href="#services" class="nav-link" data-i18n="nav.services">LAYANAN</a>
+          <a href="#about" class="nav-link" data-i18n="nav.about">TENTANG</a>
+          <a href="#process" class="nav-link" data-i18n="nav.process">PROSES</a>
+          <button type="button" class="nav-link nav-btn-link" id="insightsBtn" data-i18n="nav.insights">WAWASAN</button>
+        </nav>
+
+        <div class="topbar-actions">
+          <div class="lang-switch" id="langSwitch" role="group" aria-label="Pilih bahasa">
+            <button type="button" class="lang-btn active" data-lang="id">ID</button>
+            <button type="button" class="lang-btn" data-lang="en">EN</button>
+          </div>
+          <a href="#contact" class="btn-outline-sm desktop-cta" data-i18n="nav.cta">MARI BICARA &rarr;</a>
+          <button type="button" class="icon-circle-btn" id="themeToggle" aria-label="Ubah mode tampilan" title="Day / Night Mode">
+            <svg class="icon-moon" viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+            </svg>
+            <svg class="icon-sun" viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+              <circle cx="12" cy="12" r="4"></circle>
+              <path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M4.93 19.07l1.41-1.41M17.66 6.34l1.41-1.41"></path>
+            </svg>
+          </button>
+          <button type="button" class="mobile-menu-toggle" id="mobileMenuBtn" aria-label="Menu" aria-expanded="false">
+            <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round">
+              <line x1="4" y1="7" x2="20" y2="7"></line>
+              <line x1="4" y1="12" x2="20" y2="12"></line>
+              <line x1="4" y1="17" x2="20" y2="17"></line>
+            </svg>
+          </button>
+        </div>
+      </div>
+
+      <div class="mobile-drawer container" id="mobileDrawer">
+        <a href="#home" class="mobile-link" data-i18n="nav.home">BERANDA</a>
+        <a href="#work" class="mobile-link" data-i18n="nav.work">KARYA</a>
+        <a href="#services" class="mobile-link" data-i18n="nav.services">LAYANAN</a>
+        <a href="#about" class="mobile-link" data-i18n="nav.about">TENTANG</a>
+        <a href="#process" class="mobile-link" data-i18n="nav.process">PROSES</a>
+        <button type="button" class="mobile-link mobile-btn" id="mobileInsightsBtn" data-i18n="nav.insights">WAWASAN</button>
+        <a href="#contact" class="mobile-link mobile-cta" data-i18n="nav.cta">MARI BICARA &rarr;</a>
+      </div>
+    </header>
+
+    <main>
+      <!-- HERO SECTION -->
+      <section class="hero" id="home">
+        <span class="vertical-rail" aria-hidden="true" data-i18n="hero.rail">MERANCANG MASA DEPAN, HARI INI.</span>
+
+        <div class="container hero-grid">
+          <div class="hero-copy">
+            <p class="hero-greeting" data-i18n="hero.greeting">Halo, Saya</p>
+            <h1 class="hero-name">
+              RAKA <span>PRATAMA</span>
+            </h1>
+            <p class="hero-role" data-i18n="hero.role">UI/UX &amp; WEB DESIGNER</p>
+            <span class="hero-divider" aria-hidden="true"></span>
+            <p class="hero-desc" data-i18n="hero.desc">
+              Saya merancang pengalaman digital yang memadukan empati pengguna dengan pemikiran futuristik dan presisi visual.
+            </p>
+
+            <div class="hero-ctas">
+              <a href="#work" class="btn-primary-hero" data-i18n="hero.ctaPrimary">LIHAT KARYA SAYA &rarr;</a>
+              <button type="button" class="btn-text-hero" id="aboutMeBtn">
+                <span data-i18n="hero.ctaSecondary">TENTANG SAYA</span>
+                <span class="plus-badge" aria-hidden="true">+</span>
+              </button>
+            </div>
+
+            <div class="hero-trust">
+              <div class="avail-line">
+                <span data-i18n="hero.avail">TERSEDIA UNTUK PROYEK</span>
+                <i class="status-dot" aria-hidden="true"></i>
+              </div>
+              <div class="trust-row">
+                <div class="avatar-stack" aria-hidden="true">
+                  <img src="assets/client-andini.jpg" alt="" />
+                  <span class="av-chip av-sage">BP</span>
+                  <span class="av-chip av-dark">DK</span>
+                  <span class="av-plus">+</span>
+                </div>
+                <span class="trust-note" data-i18n="hero.trust">Dipercaya brand visioner di Indonesia &amp; global.</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="hero-visual">
+            <div class="hero-portrait-stage">
+              <img
+                src="assets/hero-portrait.jpg"
+                alt="Raka Pratama — UI/UX & Web Designer"
+                class="hero-portrait-img"
+              />
+            </div>
+
+            <div class="floating-meta-stack">
+              <div class="meta-tile">
+                <span class="meta-k" data-i18n="hero.basedK">BERBASIS DI</span>
+                <strong class="meta-v">Jakarta Selatan, <br />Indonesia <span class="geo-pin" aria-hidden="true">&#8982;</span></strong>
+              </div>
+              <div class="meta-tile meta-tile-compact">
+                <span class="meta-k" data-i18n="hero.worldK">KOLABORASI JARAK JAUH</span>
+                <svg class="globe-svg" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true">
+                  <circle cx="12" cy="12" r="9"></circle>
+                  <path d="M3 12h18M12 3a13 13 0 0 1 3.5 9 13 13 0 0 1-3.5 9 13 13 0 0 1-3.5-9A13 13 0 0 1 12 3z"></path>
+                </svg>
+              </div>
+            </div>
+
+            <div class="social-rail" aria-label="Tautan profil profesional">
+              <a href="#contact" class="social-rail-item" title="LinkedIn Inquiry">in</a>
+              <a href="#work" class="social-rail-item" title="Showcase Portfolio">
+                <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="1.8">
+                  <circle cx="12" cy="12" r="9"></circle>
+                  <path d="M3.6 9h16.8M3.6 15h16.8M11.5 3a14 14 0 0 0 0 18M12.5 3a14 14 0 0 1 0 18"></path>
+                </svg>
+              </a>
+              <a href="#work" class="social-rail-item" title="Behance Case Studies">B&#275;</a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- FEATURED WORK -->
+      <section class="section-work" id="work">
+        <div class="container">
+          <div class="section-bar">
+            <h2 class="section-micro-heading" data-i18n="work.kicker">KARYA UNGGULAN</h2>
+            <button type="button" class="link-arrow-btn" id="toggleAllWorksBtn" data-i18n="work.viewAll">LIHAT SEMUA PROYEK &rarr;</button>
+          </div>
+
+          <div class="work-grid" id="workGrid">
+            <!-- Work 01: Nexora Dashboard -->
+            <article class="work-card" data-case="nexora" tabindex="0" role="button">
+              <div class="work-thumb">
+                <div class="mock-saas">
+                  <div class="mock-saas-side">
+                    <span class="ms-dot"></span>
+                    <span class="ms-line w-70"></span>
+                    <span class="ms-line w-50 active"></span>
+                    <span class="ms-line w-60"></span>
+                    <span class="ms-line w-45"></span>
+                  </div>
+                  <div class="mock-saas-main">
+                    <div class="ms-top">
+                      <span>Revenue Overview</span>
+                      <span class="ms-pill">+24.8%</span>
+                    </div>
+                    <div class="ms-kpis">
+                      <div><small>MRR</small><strong>Rp 1,4M</strong></div>
+                      <div><small>Active Users</small><strong>18.420</strong></div>
+                      <div><small>Retention</small><strong>96.4%</strong></div>
+                    </div>
+                    <div class="ms-chart">
+                      <svg viewBox="0 0 180 56" width="100%" height="56" preserveAspectRatio="none">
+                        <defs>
+                          <linearGradient id="nxGrad" x1="0" y1="0" x2="0" y2="1">
+                            <stop offset="0%" stop-color="#3b82f6" stop-opacity="0.45"/>
+                            <stop offset="100%" stop-color="#3b82f6" stop-opacity="0"/>
+                          </linearGradient>
+                        </defs>
+                        <path d="M0 44 L26 36 L52 40 L78 24 L104 28 L130 14 L156 18 L180 8 L180 56 L0 56 Z" fill="url(#nxGrad)"/>
+                        <path d="M0 44 L26 36 L52 40 L78 24 L104 28 L130 14 L156 18 L180 8" fill="none" stroke="#60a5fa" stroke-width="2"/>
+                      </svg>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="work-card-body">
+                <h3>NEXORA DASHBOARD</h3>
+                <p data-i18n="w1.cat">Platform SaaS &middot; Desain UI/UX</p>
+              </div>
+            </article>
+
+            <!-- Work 02: Arsiteka Studio -->
+            <article class="work-card" data-case="arsiteka" tabindex="0" role="button">
+              <div class="work-thumb">
+                <div class="mock-arch">
+                  <div class="ma-copy">
+                    <span class="ma-brand">ARSITEKA</span>
+                    <strong class="ma-title" data-i18n="w2.mockHeadline">Membangun ruang lebih cerdas.</strong>
+                    <span class="ma-chip" data-i18n="w2.mockCta">Portofolio</span>
+                  </div>
+                  <div class="ma-photo">
+                    <img src="assets/arch-villa.jpg" alt="Proyek Arsitektur Minimalis Arsiteka" loading="lazy" />
+                  </div>
+                </div>
+              </div>
+              <div class="work-card-body">
+                <h3>ARSITEKA STUDIO</h3>
+                <p data-i18n="w2.cat">Website Korporat &middot; Web Design</p>
+              </div>
+            </article>
+
+            <!-- Work 03: Finovo Mobile -->
+            <article class="work-card" data-case="finovo" tabindex="0" role="button">
+              <div class="work-thumb">
+                <div class="mock-phones">
+                  <div class="phone-frame phone-front">
+                    <span class="pf-tag">Portfolio</span>
+                    <strong class="pf-bal">Rp 53,9jt</strong>
+                    <span class="pf-gain">+12.4%</span>
+                    <div class="pf-bars">
+                      <i style="height: 36%"></i>
+                      <i style="height: 55%"></i>
+                      <i style="height: 44%"></i>
+                      <i style="height: 78%"></i>
+                      <i class="hi" style="height: 92%"></i>
+                    </div>
+                  </div>
+                  <div class="phone-frame phone-back">
+                    <span class="pf-tag">Cash Flow</span>
+                    <strong class="pf-sub">Auto-Invest</strong>
+                    <div class="pf-row"><span>QRIS Pay</span><span>-Rp 185rb</span></div>
+                    <div class="pf-row"><span>Yield Div.</span><span class="up">+Rp 640rb</span></div>
+                  </div>
+                </div>
+              </div>
+              <div class="work-card-body">
+                <h3>FINOVO MOBILE</h3>
+                <p data-i18n="w3.cat">Aplikasi Mobile &middot; Desain UI/UX</p>
+              </div>
+            </article>
+
+            <!-- Work 04: Audiomi -->
+            <article class="work-card" data-case="audiomi" tabindex="0" role="button">
+              <div class="work-thumb">
+                <div class="mock-audio">
+                  <img src="assets/audiomi-headphones.jpg" alt="Headphone Studio Audiomi" loading="lazy" />
+                  <div class="mau-overlay">
+                    <span class="mau-logo">AUDIOMI</span>
+                    <strong data-i18n="w4.mockHeadline">Audio generasi baru.</strong>
+                    <span class="mau-cta" data-i18n="w4.mockCta">Jelajahi</span>
+                  </div>
+                </div>
+              </div>
+              <div class="work-card-body">
+                <h3>AUDIOMI STORE</h3>
+                <p data-i18n="w4.cat">E-Commerce &middot; Web Design</p>
+              </div>
+            </article>
+
+            <!-- Extra expandable projects -->
+            <article class="work-card work-extra is-hidden" data-case="kilau" tabindex="0" role="button">
+              <div class="work-thumb">
+                <div class="mock-skin">
+                  <div class="mskin-badge">SKINCARE &middot; D2C</div>
+                  <strong>KILAU BOTANICALS</strong>
+                  <p>Minimalist Checkout &amp; Shade Finder</p>
+                  <div class="mskin-swatches">
+                    <span style="background: #d6c5b3"></span>
+                    <span style="background: #b5c1b0"></span>
+                    <span style="background: #8f9b8c"></span>
+                  </div>
+                </div>
+              </div>
+              <div class="work-card-body">
+                <h3>KILAU BOTANICALS</h3>
+                <p data-i18n="w5.cat">E-Commerce D2C &middot; Design System</p>
+              </div>
+            </article>
+
+            <article class="work-card work-extra is-hidden" data-case="satria" tabindex="0" role="button">
+              <div class="work-thumb">
+                <div class="mock-fleet">
+                  <div class="mf-head">SATRIA LOGISTIK &middot; FLEET OS</div>
+                  <div class="mf-grid">
+                    <div class="mf-card"><small>Armada Aktif</small><strong>412 Unit</strong></div>
+                    <div class="mf-card"><small>On-Time Rate</small><strong>98.2%</strong></div>
+                  </div>
+                  <div class="mf-route">
+                    <span>JakartaHub</span>
+                    <i class="mf-dash"></i>
+                    <span>Surabaya DC</span>
+                  </div>
+                </div>
+              </div>
+              <div class="work-card-body">
+                <h3>SATRIA FLEET PORTAL</h3>
+                <p data-i18n="w6.cat">B2B Web App &middot; Product Design</p>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- WHAT I DO / SERVICES -->
+      <section class="section-services" id="services">
+        <div class="container services-layout">
+          <div class="services-intro">
+            <span class="micro-eyebrow" data-i18n="srv.kicker">APA YANG SAYA KERJAKAN</span>
+            <h2 class="services-title" data-i18n="srv.title">Rancang. Bangun. Tingkatkan.</h2>
+            <p class="services-desc" data-i18n="srv.desc">
+              Solusi desain digital end-to-end yang disesuaikan dengan target bisnis Anda.
+            </p>
+          </div>
+
+          <div class="services-list">
+            <article class="srv-item">
+              <div class="srv-head">
+                <span class="srv-icon-frame" aria-hidden="true">
+                  <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.6">
+                    <rect x="3" y="4" width="18" height="16" rx="2"></rect>
+                    <path d="M9 4v16M9 11h12"></path>
+                  </svg>
+                </span>
+                <h3 data-i18n="srv1.t">UI/UX DESIGN</h3>
+              </div>
+              <p data-i18n="srv1.d">Merancang antarmuka yang intuitif, rapi secara hierarki, dan nyaman digunakan setiap pengguna.</p>
+            </article>
+
+            <article class="srv-item">
+              <div class="srv-head">
+                <span class="srv-icon-frame" aria-hidden="true">
+                  <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.6">
+                    <rect x="2.5" y="4" width="19" height="14" rx="2"></rect>
+                    <path d="M8 21h8M6 8h5M6 12h12"></path>
+                  </svg>
+                </span>
+                <h3 data-i18n="srv2.t">WEB DESIGN</h3>
+              </div>
+              <p data-i18n="srv2.d">Website modern berkarakter kuat, responsif di semua layar, serta terstruktur mendorong konversi.</p>
+            </article>
+
+            <article class="srv-item">
+              <div class="srv-head">
+                <span class="srv-icon-frame" aria-hidden="true">
+                  <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.6">
+                    <rect x="3" y="3" width="7" height="7" rx="1"></rect>
+                    <rect x="14" y="3" width="7" height="7" rx="1"></rect>
+                    <rect x="3" y="14" width="7" height="7" rx="1"></rect>
+                    <rect x="14" y="14" width="7" height="7" rx="1"></rect>
+                  </svg>
+                </span>
+                <h3 data-i18n="srv3.t">DESIGN SYSTEMS</h3>
+              </div>
+              <p data-i18n="srv3.d">Pustaka komponen Figma dan token visual terstandar yang mempercepat kolaborasi tim produk.</p>
+            </article>
+
+            <article class="srv-item">
+              <div class="srv-head">
+                <span class="srv-icon-frame" aria-hidden="true">
+                  <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.6">
+                    <path d="M12 3l8 4.5v9L12 21l-8-4.5v-9L12 3z"></path>
+                    <path d="M12 12l8-4.5M12 12v9M12 12L4 7.5"></path>
+                  </svg>
+                </span>
+                <h3 data-i18n="srv4.t">PRODUCT DESIGN</h3>
+              </div>
+              <p data-i18n="srv4.d">Mendampingi siklus desain produk dari validasi ide, wireframe, hingga prototipe interaktif siap coding.</p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- TRUSTED BRANDS, TESTIMONIAL & SATISFACTION -->
+      <section class="section-social-proof" id="about">
+        <div class="container proof-grid">
+          <div class="brands-panel">
+            <h2 class="micro-eyebrow" data-i18n="proof.brands">DIPERCAYA BRAND INOVATIF</h2>
+            <div class="brands-grid">
+              <div class="brand-cell">
+                <svg viewBox="0 0 20 20" width="16" height="16" fill="none" stroke="currentColor" stroke-width="1.7"><path d="M4 16V4l12 12V4"/></svg>
+                <span>NEXORA</span>
+              </div>
+              <div class="brand-cell">
+                <svg viewBox="0 0 20 20" width="16" height="16" fill="none" stroke="currentColor" stroke-width="1.7"><polygon points="10,3 17,16 3,16"/><line x1="7" y1="12" x2="13" y2="12"/></svg>
+                <span>ARSITEKA</span>
+              </div>
+              <div class="brand-cell">
+                <svg viewBox="0 0 20 20" width="16" height="16" fill="none" stroke="currentColor" stroke-width="1.7"><path d="M4 5h12M4 10h9M4 5v11"/></svg>
+                <span>FINOVO</span>
+              </div>
+              <div class="brand-cell">
+                <svg viewBox="0 0 20 20" width="16" height="16" fill="none" stroke="currentColor" stroke-width="1.7"><circle cx="10" cy="10" r="6"/><path d="M7 10c1-2 2 2 3 0s2 2 3 0"/></svg>
+                <span>AUDIOMI</span>
+              </div>
+              <div class="brand-cell">
+                <svg viewBox="0 0 20 20" width="16" height="16" fill="none" stroke="currentColor" stroke-width="1.7"><circle cx="10" cy="10" r="3"/><path d="M10 2v3M10 15v3M2 10h3M15 10h3"/></svg>
+                <span>Lumina</span>
+              </div>
+              <div class="brand-cell">
+                <svg viewBox="0 0 20 20" width="16" height="16" fill="none" stroke="currentColor" stroke-width="1.7"><path d="M4 5l6 11 6-11"/></svg>
+                <span>vertex</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="testimonial-sage-card">
+            <span class="quote-mark" aria-hidden="true">&ldquo;</span>
+            <p class="testimonial-quote" id="testimonialQuote">
+              Raka adalah desainer luar biasa yang selalu membawa kejelasan, kreativitas, dan presisi tinggi ke setiap proyek digital kami.
+            </p>
+            <div class="testimonial-author">
+              <img src="assets/client-andini.jpg" alt="Foto klien testimonial" id="testimonialAvatar" />
+              <div>
+                <strong id="testimonialName">ANDINI WIJAYA</strong>
+                <span id="testimonialRole">Product Director, Finovo Indonesia</span>
+              </div>
+            </div>
+            <div class="testimonial-dots" id="testimonialDots" role="tablist" aria-label="Testimoni klien">
+              <button type="button" class="t-dot active" data-slide="0" aria-label="Testimoni 1"></button>
+              <button type="button" class="t-dot" data-slide="1" aria-label="Testimoni 2"></button>
+              <button type="button" class="t-dot" data-slide="2" aria-label="Testimoni 3"></button>
+            </div>
+          </div>
+
+          <div class="satisfaction-card">
+            <span class="micro-eyebrow" data-i18n="proof.satTitle">KEPUASAN KLIEN</span>
+            <div class="ring-wrap">
+              <svg class="sat-ring" viewBox="0 0 120 120" width="116" height="116">
+                <circle class="sat-track" cx="60" cy="60" r="48"></circle>
+                <circle class="sat-progress" cx="60" cy="60" r="48"></circle>
+              </svg>
+              <span class="ring-value">98%</span>
+            </div>
+            <span class="sat-caption" data-i18n="proof.satSub">BERDASARKAN 47+ ULASAN</span>
+          </div>
+        </div>
+      </section>
+
+      <!-- MY PROCESS -->
+      <section class="section-process" id="process">
+        <div class="container">
+          <div class="process-top">
+            <div class="process-left">
+              <div class="process-heading-row">
+                <span class="micro-eyebrow" data-i18n="proc.kicker">PROSES KERJA</span>
+                <p class="process-lead" data-i18n="proc.sub">Peta jalan jelas menuju peluncuran sukses.</p>
+              </div>
+
+              <div class="roadmap-track" aria-hidden="true">
+                <span class="rm-node active" data-step="0">1</span>
+                <span class="rm-line"></span>
+                <span class="rm-node" data-step="1">2</span>
+                <span class="rm-line"></span>
+                <span class="rm-node" data-step="2">3</span>
+                <span class="rm-line"></span>
+                <span class="rm-node" data-step="3">4</span>
+                <span class="rm-line"></span>
+                <span class="rm-node" data-step="4">5</span>
+                <span class="rm-tail-line"><i class="rm-blue-dot"></i></span>
+              </div>
+            </div>
+
+            <div class="process-hand-wrap">
+              <img src="assets/robot-hand.jpg" alt="Sentuhan futuristik desain sistem digital" loading="lazy" />
+            </div>
+          </div>
+
+          <div class="process-cards">
+            <article class="proc-card active" data-step="0">
+              <div class="proc-card-head">
+                <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="11" cy="11" r="7"/><path d="M20 20l-3.5-3.5"/></svg>
+                <h3 data-i18n="p1.t">DISCOVER</h3>
+              </div>
+              <p data-i18n="p1.d">Memahami model bisnis, audiens target, dan tujuan utama produk digital Anda.</p>
+            </article>
+
+            <article class="proc-card" data-step="1">
+              <div class="proc-card-head">
+                <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="4"/><circle cx="12" cy="12" r="1"/></svg>
+                <h3 data-i18n="p2.t">DEFINE</h3>
+              </div>
+              <p data-i18n="p2.d">Riset kompetitor, arsitektur informasi, dan penyusunan strategi alur pengguna.</p>
+            </article>
+
+            <article class="proc-card" data-step="2">
+              <div class="proc-card-head">
+                <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 20h9M16.5 3.5a2.1 2.1 0 0 1 3 3L7 19l-4 1 1-4L16.5 3.5z"/></svg>
+                <h3 data-i18n="p3.t">DESIGN</h3>
+              </div>
+              <p data-i18n="p3.d">Eksplorasi wireframe, sistem UI/UX presisi, hingga prototipe interaktif siap uji.</p>
+            </article>
+
+            <article class="proc-card" data-step="3">
+              <div class="proc-card-head">
+                <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="1.8"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg>
+                <h3 data-i18n="p4.t">DEVELOP</h3>
+              </div>
+              <p data-i18n="p4.d">Kolaborasi intensif handoff desain dan implementasi front-end bersih responsif.</p>
+            </article>
+
+            <article class="proc-card" data-step="4">
+              <div class="proc-card-head">
+                <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M4.5 16.5c-1.5 1.26-2 5-2 5s3.74-.5 5-2c.71-.84.7-2.13-.09-2.91a2.18 2.18 0 0 0-2.91-.09z"/><path d="M12 15l-3-3a22 22 0 0 1 2-3.95A12.88 12.88 0 0 1 22 2c0 2.72-.78 7.5-6 11a22.35 22.35 0 0 1-4 2z"/></svg>
+                <h3 data-i18n="p5.t">DELIVER</h3>
+              </div>
+              <p data-i18n="p5.d">Uji kualitas menyeluruh di desktop &amp; mobile sebelum rilis penuh ke publik.</p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- SAGE METRICS STRIP -->
+      <section class="sage-stats-band" aria-label="Pencapaian studio">
+        <div class="container stats-grid">
+          <div class="stat-item">
+            <svg viewBox="0 0 24 24" width="26" height="26" fill="none" stroke="currentColor" stroke-width="1.4"><rect x="3" y="4" width="14" height="14" rx="2"/><path d="M7 20h12a2 2 0 0 0 2-2V8"/></svg>
+            <div>
+              <strong class="stat-num" data-target="47" data-suffix="+">47+</strong>
+              <span data-i18n="st.proj">PROYEK SELESAI</span>
+            </div>
+          </div>
+
+          <div class="stat-item">
+            <svg viewBox="0 0 24 24" width="26" height="26" fill="none" stroke="currentColor" stroke-width="1.4"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+            <div>
+              <strong class="stat-num" data-target="31" data-suffix="">31</strong>
+              <span data-i18n="st.clients">KLIEN PUAS</span>
+            </div>
+          </div>
+
+          <div class="stat-item">
+            <svg viewBox="0 0 24 24" width="26" height="26" fill="none" stroke="currentColor" stroke-width="1.4"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>
+            <div>
+              <strong class="stat-num" data-target="5" data-suffix="+">5+</strong>
+              <span data-i18n="st.years">TAHUN PENGALAMAN</span>
+            </div>
+          </div>
+
+          <div class="stat-item">
+            <svg viewBox="0 0 24 24" width="26" height="26" fill="none" stroke="currentColor" stroke-width="1.4"><path d="M14 9V5a3 3 0 0 0-3-3l-4 9v11h11.28a2 2 0 0 0 2-1.7l1.38-9a2 2 0 0 0-2-2.3H14z"/><path d="M7 22H4a2 2 0 0 1-2-2v-7a2 2 0 0 1 2-2h3"/></svg>
+            <div>
+              <strong class="stat-num" data-target="98" data-suffix="%">98%</strong>
+              <span data-i18n="st.sat">KEPUASAN KLIEN</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- CONTACT SECTION -->
+      <section class="section-contact" id="contact">
+        <div class="container contact-grid">
+          <div class="contact-info">
+            <h2 class="contact-title" data-i18n="cnt.title">MARI WUJUDKAN KARYA LUAR BIASA</h2>
+            <p class="contact-desc" data-i18n="cnt.desc">
+              Sedang merencanakan produk digital atau sekadar berdiskusi ide awal? Saya siap mendengar kebutuhan Anda.
+            </p>
+            <ul class="contact-details">
+              <li>
+                <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 7l9 6 9-6"/></svg>
+                <a href="mailto:hello@rakapratama.id">hello@rakapratama.id</a>
+              </li>
+              <li>
+                <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+                <span>Jakarta Selatan, Indonesia</span>
+              </li>
+            </ul>
+          </div>
+
+          <form class="contact-form" id="contactForm" novalidate>
+            <div class="cf-row-2">
+              <input type="text" id="cfName" required placeholder="Nama Anda" data-i18n-ph="cnt.namePh" />
+              <input type="email" id="cfEmail" required placeholder="Email Anda" data-i18n-ph="cnt.emailPh" />
+            </div>
+            <select id="cfType" aria-label="Jenis Proyek">
+              <option value="" disabled selected data-i18n="cnt.typeDef">Pilih Jenis Proyek</option>
+              <option value="UI/UX Product Design">UI/UX &amp; SaaS Product Design</option>
+              <option value="Corporate & Brand Website">Website Perusahaan &amp; Brand</option>
+              <option value="E-Commerce Experience">E-Commerce &amp; Katalog Digital</option>
+              <option value="Design System">Design System &amp; UI Kit</option>
+            </select>
+            <textarea id="cfMessage" rows="3" required placeholder="Ceritakan singkat proyek Anda..." data-i18n-ph="cnt.msgPh"></textarea>
+            <button type="submit" class="btn-submit-blue" data-i18n="cnt.submit">KIRIM PESAN &rarr;</button>
+            <p class="form-feedback" id="contactFeedback" aria-live="polite"></p>
+          </form>
+
+          <div class="cubes-card">
+            <div class="cubes-art-wrap">
+              <img src="assets/cubes-3d.jpg" alt="Karya arsitektur 3D minimalis" loading="lazy" />
+            </div>
+            <div class="cubes-status">
+              <i class="status-dot" aria-hidden="true"></i>
+              <span data-i18n="cnt.avail">TERSEDIA UNTUK PROYEK FREELANCE &amp; KOLABORASI PENUH WAKTU</span>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- DARK FOOTER -->
+    <footer class="footer">
+      <div class="container footer-grid">
+        <div class="footer-brand">
+          <div class="footer-logo">
+            <svg viewBox="0 0 36 32" width="28" height="24" fill="none" aria-hidden="true">
+              <path d="M3 4h11c4.4 0 7.2 2.4 7.2 6.3 0 3.1-1.8 5.2-4.7 5.9L22.2 28h-5.3l-5.2-9.6H8.4V28H3V4zm5.4 4.3v5.4h4.7c1.9 0 3-1 3-2.7s-1.1-2.7-3-2.7H8.4z" fill="#3b82f6"/>
+              <path d="M21 4h7.5C32.7 4 35 6.4 35 10.2c0 3.9-2.3 6.3-6.5 6.3h-2.1V28H21V4zm5.4 4.3v4h1.7c1.6 0 2.5-.8 2.5-2s-.9-2-2.5-2h-1.7z" fill="#e2e8f0"/>
+            </svg>
+            <span>RAKA PRATAMA</span>
+          </div>
+          <p class="footer-role" data-i18n="hero.role">UI/UX &amp; WEB DESIGNER</p>
+          <p class="footer-copy">&copy; 2026 Raka Pratama. All rights reserved.</p>
+        </div>
+
+        <div class="footer-col">
+          <h4 data-i18n="ft.nav">NAVIGASI</h4>
+          <div class="footer-nav-2col">
+            <a href="#home" data-i18n="ft.home">Beranda</a>
+            <a href="#process" data-i18n="ft.process">Proses</a>
+            <a href="#about" data-i18n="ft.about">Tentang</a>
+            <a href="#insights" class="footer-insights-trigger" data-i18n="ft.insights">Wawasan</a>
+            <a href="#services" data-i18n="ft.services">Layanan</a>
+            <a href="#contact" data-i18n="nav.ctaShort">Kontak</a>
+            <a href="#work" data-i18n="ft.work">Karya</a>
+          </div>
+        </div>
+
+        <div class="footer-col">
+          <h4 data-i18n="ft.follow">IKUTI SAYA</h4>
+          <div class="footer-link-stack">
+            <a href="#contact">LinkedIn</a>
+            <a href="#work">Dribbble</a>
+            <a href="#work">Behance</a>
+          </div>
+        </div>
+
+        <div class="footer-col">
+          <h4>NEWSLETTER</h4>
+          <p class="footer-news-desc" data-i18n="ft.newsDesc">
+            Catatan desain, studi kasus UI/UX, dan inspirasi produk langsung ke kotak masuk Anda.
+          </p>
+          <form class="newsletter-form" id="newsletterForm" novalidate>
+            <input type="email" id="newsEmail" required placeholder="Email Anda" data-i18n-ph="cnt.emailPh" />
+            <button type="submit" aria-label="Berlangganan newsletter">&rarr;</button>
+          </form>
+          <p class="news-feedback" id="newsFeedback" aria-live="polite"></p>
+        </div>
+      </div>
+    </footer>
+
+    <!-- UNIVERSAL DETAIL MODAL (Case Studies, About Bio, Insights) -->
+    <div class="modal-backdrop" id="uiModal" role="dialog" aria-modal="true" aria-labelledby="uiModalTitle">
+      <div class="modal-panel">
+        <button type="button" class="modal-close-btn" id="uiModalClose" aria-label="Tutup modal">&times;</button>
+        <span class="modal-eyebrow" id="uiModalTag"></span>
+        <h3 class="modal-heading" id="uiModalTitle"></h3>
+        <p class="modal-subtitle" id="uiModalSub"></p>
+        <div class="modal-body-content" id="uiModalBody"></div>
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
